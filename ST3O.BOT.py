@@ -1,7 +1,7 @@
 import telebot
 import random
 from BOTDB import qst, yn, stk, hello, love, why
-bot = telebot.TeleBot("1884901527:AAHMk0PGiTIzVhpp_vTimzAEsuSSnUzvvDA")
+bot = telebot.TeleBot("TOKEN")
 
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
