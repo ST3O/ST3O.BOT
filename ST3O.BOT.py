@@ -1,7 +1,9 @@
 import telebot
 import random
-from BOTDB import qst, yn, stk, hello, love, why
-bot = telebot.TeleBot("TOKEN")
+from BOTDB import qst, yesNo, stk, hello, love, why, dontUnderstand
+bot = telebot.TeleBot("1884901527:AAE1Q1Aw4gTrrNOL1epD6DztH-Zh9q91s-4")
+
+print("Running!")
 
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
@@ -22,10 +24,10 @@ def get_text_messages(message):
         bot.send_message(message.from_user.id, random.choice(qst))
         
     elif message.text.lower() == 'yes or no?':
-        bot.send_message(message.from_user.id, random.choice(yn))
+        bot.send_message(message.from_user.id, random.choice(yesNo))
         
     else:
-        bot.send_message(message.from_user.id, 'UNRECOGNIZABLE ERROR')
+        bot.send_message(message.from_user.id, random.choice(dontUnderstand))
 
 @bot.message_handler(content_types=['sticker'])
 def get_sticker_messages(message):
