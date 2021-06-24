@@ -1,7 +1,7 @@
 import telebot
 import random
 from BOTDB import qst, yesNo, stk, hello, love, why, dontUnderstand
-bot = telebot.TeleBot("1884901527:AAE1Q1Aw4gTrrNOL1epD6DztH-Zh9q91s-4")
+bot = telebot.TeleBot("TOKEN")
 
 print("Running!")
 
