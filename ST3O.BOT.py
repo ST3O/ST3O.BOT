@@ -1,6 +1,6 @@
 import telebot
 import random
-from BOTDB import qst, yesNo, stk, hello, love, why, dontUnderstand
+from BOTDB import *
 bot = telebot.TeleBot("TOKEN")
 
 print("Running!")
@@ -25,6 +25,9 @@ def get_text_messages(message):
         
     elif message.text.lower() == 'yes or no?':
         bot.send_message(message.from_user.id, random.choice(yesNo))
+
+    elif message.text.lower() == 'bye':
+        bot.send_message(message.from_user.id, random.choice(bye))
         
     else:
         bot.send_message(message.from_user.id, random.choice(dontUnderstand))
